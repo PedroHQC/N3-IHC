@@ -1,0 +1,19 @@
+<h2>Curiosidades</h2>
+<div class="carousel">
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentSlideIndex"
+  >
+    <img [src]="slide.image" alt="{{ slide.text }}" />
+    <div>
+      <h3>{{ slide.text }}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="navigation">
+  <div (click)="updateTransform(0)" class="btn1"></div>
+  <div (click)="updateTransform(100)" class="btn2"></div>
+  <div (click)="updateTransform(160)" class="btn3"></div>
+</div>
