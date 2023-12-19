@@ -1,6 +1,16 @@
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
   font-family: "Inter";
 }
+
+section {
+  background-color: #006494;
+  padding-bottom: 4rem;
+}
+
 h2 {
   text-align: center;
   font-size: 2.25rem;
@@ -8,7 +18,7 @@ h2 {
 
   font-weight: 500;
 
-  margin-bottom: 2.25rem;
+  padding: 2.25rem;
 }
 
 h3 {
@@ -17,16 +27,23 @@ h3 {
   font-weight: 500;
 }
 
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
+.container {
+  position: relative;
 }
 
-.slide {
-  flex: 0 0 20rem;
-  margin-right: 2rem;
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.gallery div {
   width: 20rem;
-  position: relative;
 }
 
 img {
@@ -43,6 +60,7 @@ img {
 }
 
 .navigation div {
+  transition: all 600ms ease-in-out;
   background-color: #d9d9d9;
   cursor: pointer;
   border-radius: 1rem;
@@ -52,4 +70,120 @@ img {
 
 .navigation div:hover {
   background-color: #3cc6eb;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 1rem 5rem 1rem 6rem;
+}
+
+footer .contact {
+  font-family: "Merriweather";
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h4,
+input,
+button,
+li {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  color: #000;
+  background-color: #e8f1f2;
+  padding: 0.625rem;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.42);
+}
+
+button {
+  width: max-content;
+  padding: 0.25rem;
+  background-color: #000;
+  border: solid 3px #fff;
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-large {
+  height: 4rem;
+}
+
+.language h4 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+ul {
+  display: inline-block;
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.privacy {
+  text-align: center;
+}
+
+.social-media {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media ul {
+  display: flex;
+}
+
+.social-media h4 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-media img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.social-media img:hover {
+  opacity: 0.7;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 6rem;
+  gap: 0.625rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+}
+
+.button span {
+  color: #000;
+}
+
+.button:hover {
+  opacity: 0.7;
 }
