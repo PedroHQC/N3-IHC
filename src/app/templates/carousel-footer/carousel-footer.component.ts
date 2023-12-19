@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-footer',
@@ -6,9 +6,8 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./carousel-footer.component.css'],
 })
 export class CarouselFooterComponent {
-  constructor(private el: ElementRef, public renderer: Renderer2) {}
-
   currentSlideIndex = 0;
+  itemsToShow = 4;
   slides = [
     {
       image: 'assets/images/sandy_mini2.jpg',
@@ -52,12 +51,27 @@ export class CarouselFooterComponent {
     },
   ];
 
-  public updateTransform(value: number) {
-    const transformValue = `translateX(${-value}%)`;
-    this.renderer.setStyle(
-      this.el.nativeElement.querySelector('.carousel'),
-      'transform',
-      transformValue
+  get visibleSlides() {
+    const startIndex = this.currentSlideIndex;
+    const endIndex = startIndex + this.itemsToShow;
+    return this.slides.slice(startIndex, endIndex);
+  }
+
+  public updateSlide(direction: 'start' | 'half' | 'end') {
+    const maxItems = this.slides.length;
+
+    if (direction === 'start') {
+      this.currentSlideIndex = 0;
+    } else if (direction === 'half') {
+      this.currentSlideIndex =
+        Math.floor(maxItems / 2) - Math.floor(this.itemsToShow / 2);
+    } else if (direction === 'end') {
+      this.currentSlideIndex = maxItems - this.itemsToShow;
+    }
+
+    this.currentSlideIndex = Math.max(
+      0,
+      Math.min(this.currentSlideIndex, maxItems - this.itemsToShow)
     );
   }
 }

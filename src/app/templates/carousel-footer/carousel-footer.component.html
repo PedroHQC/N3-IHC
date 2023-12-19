@@ -1,19 +1,58 @@
-<h2>Curiosidades</h2>
-<div class="carousel">
-  <div
-    class="slide"
-    *ngFor="let slide of slides; let i = index"
-    [class.active]="i === currentSlideIndex"
-  >
-    <img [src]="slide.image" alt="{{ slide.text }}" />
-    <div>
-      <h3>{{ slide.text }}</h3>
+<section>
+  <h2>Curiosidades</h2>
+  <div class="container">
+    <div class="gallery-wrapper">
+      <div
+        class="gallery"
+        *ngFor="let slide of visibleSlides; let i = index"
+        [class.active]="i === currentSlideIndex"
+      >
+        <img [src]="slide.image" alt="{{ slide.text }}" />
+        <div>
+          <h3>{{ slide.text }}</h3>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="navigation">
-  <div (click)="updateTransform(0)" class="btn1"></div>
-  <div (click)="updateTransform(100)" class="btn2"></div>
-  <div (click)="updateTransform(160)" class="btn3"></div>
-</div>
+  <div class="navigation">
+    <div (click)="updateSlide('start')" class="btn1"></div>
+    <div (click)="updateSlide('half')" class="btn2"></div>
+    <div (click)="updateSlide('end')" class="btn3"></div>
+  </div>
+</section>
+<footer>
+  <div class="contact">
+    <h4>Contate-nos</h4>
+    <input placeholder="Seu nome" type="text" />
+    <input placeholder="Seu emial" type="email  " />
+    <input placeholder="Mensagem" type="text" class="input-large" />
+    <button type="submit">Enviar</button>
+  </div>
+  <div class="language">
+    <ul>
+      <li>English</li>
+      <li>Espanol</li>
+      <li>Português</li>
+      <li>Francês</li>
+    </ul>
+    <h4>1997 MusikCity &reg;</h4>
+  </div>
+  <div class="social-media">
+    <ul>
+      <li><img src="assets/icons/x.svg" alt="" /></li>
+      <li><img src="assets/icons/instagram.svg" alt="" /></li>
+      <li><img src="assets/icons/facebook.svg" alt="" /></li>
+      <li><img src="assets/icons/spotify.svg" alt="" /></li>
+      <li><img src="assets/icons/youtube.svg" alt="" /></li>
+    </ul>
+    <div class="privacy">
+      <h4>Politica de privacidade</h4>
+      <h4>Créditos</h4>
+    </div>
+    <div class="button" style="background-color: rgba(255, 255, 255, 0.8)">
+      <img src="assets/icons/help.png" alt="" />
+      <span>Ajuda</span>
+    </div>
+  </div>
+</footer>
