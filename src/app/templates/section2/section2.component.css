@@ -28,10 +28,10 @@
   border-radius: 15px;
   background-color: #006494;
   border-color: aliceblue;
-  width: 10%;
-  height: 40px;
+  width: 9%;
+  height: 60px;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .button2 {
@@ -47,6 +47,17 @@
   justify-content: space-between;
 }
 
+.button-know-more{
+  border-radius: 15px;
+  background-color: #006494;
+  border-color: aliceblue;
+  width: 30%;
+  height: 43px;
+  color: aliceblue;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
 h1 {
   color: aliceblue;
 }
@@ -54,9 +65,16 @@ h1 {
 .img {
   display: flex;
   align-items: baseline;
+  margin-right: 10px;
+  width: 80px;
 }
 
 .img2 {
+  width: 10%;
+  margin: 10px;
+}
+
+.img3 {
   margin-top: 5%;
 }
 

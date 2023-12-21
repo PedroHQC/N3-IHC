@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family: "Inter";
 }
 
 section {
@@ -80,11 +79,13 @@ footer {
 }
 
 footer .contact {
-  font-family: "Merriweather";
+  /* font-family: "Merriweather"; */
+  font-weight: 300px;
   width: 18rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 10px;
 }
 
 h4,
@@ -112,6 +113,7 @@ button {
   padding: 0.25rem;
   background-color: #000;
   border: solid 3px #fff;
+  border-radius: 10px;
 }
 
 .language {
