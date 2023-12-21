@@ -1,0 +1,85 @@
+.button{
+    height: 100%;
+    background-color: #006494;
+    color:aliceblue;
+    width: 130px;
+    border: none;
+    font-size: 22px;
+}
+.section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 250px;
+    margin-left: 22px;
+}
+.big-text{
+    margin-left: 22px;
+}
+.acessibility-image{
+    width: 90px;
+    padding: 16px 16px 0 0;
+    margin-right: 16px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.jobs-range{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 350px;
+    background-color: aliceblue;
+    width: 100%;
+}
+.card{
+    background-color: #006494;
+    border-radius: 10px;
+    width: 13%;
+    height: 45%;
+    padding: 16px;
+}
+.button-know-more{
+    border: 3px solid;
+    border-radius: 15px;
+    background-color: #006494;
+    border-color: aliceblue;
+    width: 10%;
+    height: 40px;
+    color: aliceblue;
+    font-size: 20px;
+}
+.card-title{
+    margin-bottom: -16px;
+}
+.card-icon{
+    /* margin: 8px 0 0 8px; */
+    height: 50px;
+    width: 50px;
+}
+
+h1{
+    color: aliceblue;
+}
+h2{
+    margin: -8px 0 -16px 0;
+    color: aliceblue;
+    font-weight: 450;
+}
+h3{
+    color: aliceblue;
+    font-weight: 300;
+}
+.img{
+    margin: 25px 130px 25px 25px;
+}

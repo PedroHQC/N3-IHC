@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarouselFooterComponent } from './templates/carousel-footer/carousel-footer.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { Section2Component } from './templates/section2/section2.component';
+import { Section3Component } from './templates/section3/section3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselFooterComponent
+    CarouselFooterComponent,
+    Section2Component,
+    Section3Component
   ],
   imports: [
     BrowserModule,
